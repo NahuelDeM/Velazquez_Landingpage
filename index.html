@@ -14,21 +14,11 @@
     <!--Lo se no funciona esta navbar pero la hice igual para que no faltara, desconozco el porque no funcionaba entiendo que me equivoque en algo del script-->
     <nav>
         <button class="nav-boton" onclick="accion()">Menú</button>
-        <a href="#" class="nav-enlace desaparece">Inicio</a>
-        <a href="#nosotros" class="nav-enlace desaparece">Nosotros</a>
-        <a href="#cursos" class="nav-enlace desaparece">Cursos</a>
-        <a href="#contacto" class="nav-enlace desaparece">Contacto</a>
+        <a name="#" class="nav-enlace desaparece">Inicio</a>
+        <a name="#nosotros" class="nav-enlace desaparece">Nosotros</a>
+        <a name="#cursos" class="nav-enlace desaparece">Cursos</a>
+        <a name="#contacto" class="nav-enlace desaparece">Contacto</a>
     </nav>
-
-    <script>
-    function accion(){
-        console.log('está funcionando mi boton');
-        var ancla = document.getElementsByClassName('nav-enlace');
-        for(var i = 0; i < ancla.length; i++){
-            ancla[i].classList.toggle('desaparece');
-        }
-    }
-    </script>
         <!--Cabezera-->
     <header class="hero">
         <div class="textos-hero">
