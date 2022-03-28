@@ -11,6 +11,24 @@
 </head>
 
 <body>
+    <!--Lo se no funciona esta navbar pero la hice igual para que no faltara, desconozco el porque no funcionaba entiendo que me equivoque en algo del script-->
+    <nav>
+        <button class="nav-boton" onclick="accion()">Menú</button>
+        <a href="#" class="nav-enlace desaparece">Inicio</a>
+        <a href="#nosotros" class="nav-enlace desaparece">Nosotros</a>
+        <a href="#cursos" class="nav-enlace desaparece">Cursos</a>
+        <a href="#contacto" class="nav-enlace desaparece">Contacto</a>
+    </nav>
+
+    <script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        var ancla = document.getElementsByClassName('nav-enlace');
+        for(var i = 0; i < ancla.length; i++){
+            ancla[i].classList.toggle('desaparece');
+        }
+    }
+    </script>
         <!--Cabezera-->
     <header class="hero">
         <div class="textos-hero">
@@ -29,18 +47,19 @@
     <section class="wave-contenedor website">
         <!--La imagen de la minita con la compu-->
         <img src="img/ilustracion1.svg" alt="">
-        <div class="contenedor-textos-main">
-            <h2 class="titulo left">Aca va una seccion</h2>
-            <p class="parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim reiciendis
-                molestias nam tempore. Ullam hic accusantium eligendi ipsam corrupti!</p>
+        <div id="#nosotros" class="contenedor-textos-main">
+            <h2 class="titulo left">¿Quienes somos?</h2>
+            <p class="parrafo">Todo empezo como un pequeño proyecto de 10 chicos que deseaban enseñar programación y otorgar sus conocimientos a alumnos,
+                Somos ESI una universidad de programación para personas que desean aprender a programar, 
+                estamos orientados a las personas que desean desarrollar juegos indie, y aprender a programar en HTML, CSS, C++, JS y más.</p>
             <a href="" class="cta">Leer mas</a>
         </div>
     </section>
     <!--Segunda seccion-->
     <section class="info">
         <div class="contenedor">
-            <h2 class="titulo left">Pondria algo emotivo aca pero no da</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h2 class="titulo left">Objetivos</h2>
+            <p>Otorgar los conocimientos necesarios para que las personas que estudien con nosotros puedan desarrollar sus propios videojuegos, paginas web y demás.</p>
         </div>
     </section>
     <!--Tercera sesion con articulos dentro-->
@@ -49,34 +68,40 @@
         <div class="content-cards">
             <article class="card">
                 <i class="far fa-clone"></i>
-                <h3>Title Card</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <h3>Trabajo Ordenado</h3>
+                <p>Llevamos un seguimiento estricto de todos nuestros trabajos.</p>
                 <a href="" class="cta">Leer mas</a>
             </article>
             <article class="card">
                 <i class="fas fa-database"></i>
-                <h3>Title Card</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <h3>Alojamiento de archivos</h3>
+                <p>Trabajamos en una nube para no perder información.</p>
                 <a href="" class="cta">Leer mas</a>
             </article>
             <article class="card">
                 <i class="far fa-object-group"></i>
-                <h3>Title Card</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <h3>Plasmamos Proyectos</h3>
+                <p>Plasmamos nuestros Proyectos lo que facilita el trabajo.</p>
+                <a href="" class="cta">Leer mas</a>
+            </article>
+            <article class="card">
+                <i class="fa fa-atom"></i>
+                <h3>Trabajamos en equipo</h3>
+                <p>En equipo todo es más rapido y eficaz.</p>
                 <a href="" class="cta">Leer mas</a>
             </article>
         </div>
     </section>
     <!--La galeria con las imagenes :p-->
     <section class="galeria">
-        <div class="contenedor">
-            <h2 class="titulo">Nuestro trabajo</h2>
+        <div id="#cursos" class="contenedor">
+            <h2 class="titulo">Nuestros Cursos</h2>
             <article class="galeria-cont">
                 <img src="Img/uno.jpg" alt="">
                 <img src="Img/dos.jpg" alt="">
                 <img src="Img/tres.png" alt="">
                 <img src="Img/cuatro.jpg" alt="">
-                <img src="Img/cuatro.jpg" alt="">
+                <img src="Img/cinco.jpg" alt="">
                 <img src="Img/seis.jpg" alt="">
                 <img src="Img/siete" alt="">
                 <img src="Img/ocho.jpg" alt="">
@@ -91,8 +116,8 @@
 
         <div class="contenedor last-section">
             <div class="contenedor-textos-main">
-                <h2 class="titulo left">Otra seccion</h2>
-                <p class="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum reprehenderit nostrum expedita quasi odio architecto laudantium sunt nemo dicta atque?</p>
+                <h2 class="titulo left">Acá iban los trabajadores</h2>
+                <p class="parrafo">Pero Nahuel lo olvido 7u7</p>
                 <a href="" class="cta">Leer mas</a>
             </div>
             <img src="Img/ilustracion1.svg" alt="">
@@ -104,6 +129,12 @@
                 style="stroke: none; fill: rgba(253, 203, 241, 0.693);"></path>
         </svg></div>
     </section>
+    <div class="social-bar">
+        <a href="https://www.facebook.com/matea.social/" class="icon icon-facebook" target="_blank"></a>
+        <a href="https://twitter.com/mateasocial" class="icon icon-twitter" target="_blank"></a>
+        <a href="https://www.linkedin.com/company/matea-social/" class="icon icon-linkedin" target="_blank"></a>
+        <a href="https://www.instagram.com/matea.social/" class="icon icon-instagram" target="_blank"></a>
+      </div>
     <!--pie de pagina aclaro no esta terminado este html es solo una version de prueba-->
     <footer id="contacto">
         <div class="contenedor">
@@ -111,10 +142,22 @@
             <form action="" class="form">
                 <input class="input"  type="text" name="" id="" placeholder="Nombre">
                 <input class="input"  type="email" name="" id="" placeholder="Email">
+                <input class="input"  type="text" name="" id="" placeholder="Numero">
+                <input class="input"  type="text" name="" id="" placeholder="Asunto">
                 <textarea  class="input" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
                 <input class="input"  type="submit" value="Enviar">
             </form>
         </div>
+        <hr>
+        <section>
+              <p style="text-align: end;">Nahuel Velazquez, Created for Matea 2022.</p> 
+              <p style="text-align: end;">Email de la empresa: Bios.Nahuel@gmail.com</p>
+              <p style="text-align: end;">WhatsApp de la empresa: 096609079</p>
+              <p style="text-align: end;">Horarios de atención: De lun a vie de 9:00AM a 17:00PM</p>
+              <p style="text-align: end;">Dirección: Jose Pedro Varela 3181, Rio Negro, Fray Bentos.</p>
+        </section>
+
+        
     </footer>
 
     <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
